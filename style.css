@@ -25,13 +25,15 @@ button {
 
 body {
   font-size: 1.6rem;
+  background: var(--color-gray-background);
+}
+
+main {
+  margin: 0 auto;
 }
 
 #home {
   text-align: center;
-  max-width: 430px;
-  margin: 0 auto;
-  background: var(--color-gray-background);
 }
 
 #home h1 {
@@ -63,8 +65,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  max-width: 430px;
-  margin: 0 auto;
   padding-block: 5.3rem;
 }
 
@@ -95,8 +95,6 @@ body {
 }
 
 #contato {
-  max-width: 430px;
-  margin: 0 auto;
   background: var(--color-gray-background);
   padding-block: 6.5rem;
   display: block;
@@ -180,8 +178,6 @@ body {
 }
 
 footer {
-  max-width: 430px;
-  margin: 0 auto;
   padding: 1.6rem;
   text-align: center;
   color: var(--color-white);
@@ -190,4 +186,48 @@ footer {
   font-weight: 600;
   line-height: normal;
   background: linear-gradient(96deg, #343193 0%, #302c63 99.68%);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*---Mobile firts---*/
+
+@media (min-width: 836px) {
+  main {
+    max-width: 1020px;
+  }
+
+  #home {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.8rem;
+    align-items: center;
+    margin-bottom: 9rem;
+  }
+
+  #hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  #home img {
+    order: 2;
+  }
+  #hero .card {
+    max-width: 366px;
+    height: 488px;
+  }
+
+  #hero .card p {
+    width: 200px;
+  }
+
+  #contato form {
+    margin: 0;
+    width: 560px;
+  }
 }
